@@ -1,0 +1,171 @@
+﻿@model AccordionVM
+
+@{
+    ViewData["Title"] = "Accordion";
+}
+
+<section id="accordion-title">
+    <div class="container py-4">
+        <div class="row py-5">
+            <div class="col-12">
+                <h1>@Model.AccordionTitle.Title</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="accordion">
+    <div class="container">
+        <div class="row accordion">
+            <div class="col-md-6 my-5">
+                @{
+                    bool isFirstTime = true;
+
+                    @foreach (var accordionDetail in Model.AccordionDetails)
+                    {
+                        if (isFirstTime)
+                        {
+                            <div class="question active border p-3 mt-3">
+                                <i class="fas fa-minus fa-sm mr-2"></i>
+                                <span>@accordionDetail.Title</span>
+                            </div>
+                            <div class="answer active">
+                                <p class="py-3">
+                                    @accordionDetail.Detail
+                                </p>
+                            </div>
+                        }
+                        else
+                        {
+
+                            <div class="question border p-3 mt-3">
+                                <i class="fas fa-plus fa-sm mr-2"></i>
+                                <span>@accordionDetail.Title</span>
+                            </div>
+                            <div class="answer">
+                                <p class="py-3">
+                                    @accordionDetail.Detail
+                                </p>
+                            </div>
+                        }
+
+                        isFirstTime = false;
+
+                    }
+                }
+            </div>
+            <div class="col-md-6 my-5">
+                @{
+                    bool isFirstTime2 = true;
+
+                    @foreach (var accordionDetail in Model.AccordionDetails)
+                    {
+                        if (isFirstTime2)
+                        {
+                            <div class="question active border p-3 mt-3">
+                                <i class="fas fa-minus fa-sm mr-2"></i>
+                                <span>@accordionDetail.Title</span>
+                            </div>
+                            <div class="answer active">
+                                <p class="py-3">
+                                    @accordionDetail.Detail
+                                </p>
+                            </div>
+                        }
+                        else
+                        {
+
+                            <div class="question border p-3 mt-3">
+                                <i class="fas fa-plus fa-sm mr-2"></i>
+                                <span>@accordionDetail.Title</span>
+                            </div>
+                            <div class="answer">
+                                <p class="py-3">
+                                    @accordionDetail.Detail
+                                </p>
+                            </div>
+                        }
+
+                        isFirstTime2 = false;
+
+                    }
+                }
+            </div>
+        </div>
+        <div class="row accordion-color">
+            <div class="col-md-6 my-5">
+                @{
+                    bool isFirstTime3 = true;
+
+                    @foreach (var accordionDetail in Model.AccordionDetails)
+                    {
+                        if (isFirstTime3)
+                        {
+                            <div class="question active border p-3 mt-3">
+                                <i class="fas fa-minus fa-sm mr-2"></i>
+                                <span>@accordionDetail.Title</span>
+                            </div>
+                            <div class="answer active">
+                                <p class="py-3">
+                                    @accordionDetail.Detail
+                                </p>
+                            </div>
+                        }
+                        else
+                        {
+
+                            <div class="question border p-3 mt-3">
+                                <i class="fas fa-plus fa-sm mr-2"></i>
+                                <span>@accordionDetail.Title</span>
+                            </div>
+                            <div class="answer">
+                                <p class="py-3">
+                                    @accordionDetail.Detail
+                                </p>
+                            </div>
+                        }
+
+                        isFirstTime3 = false;
+
+                    }
+                }
+            </div>
+            <div class="col-md-6 my-5">
+                @{
+                    bool isFirstTime4 = true;
+
+                    @foreach (var accordionDetail in Model.AccordionDetails)
+                    {
+                        if (isFirstTime4)
+                        {
+                            <div class="question active border p-3 mt-3">
+                                <i class="fas fa-minus fa-sm mr-2"></i>
+                                <span>@accordionDetail.Title</span>
+                            </div>
+                            <div class="answer active">
+                                <p class="py-3">
+                                    @accordionDetail.Detail
+                                </p>
+                            </div>
+                        }
+                        else
+                        {
+
+                            <div class="question border p-3 mt-3">
+                                <i class="fas fa-plus fa-sm mr-2"></i>
+                                <span>@accordionDetail.Title</span>
+                            </div>
+                            <div class="answer">
+                                <p class="py-3">
+                                    @accordionDetail.Detail
+                                </p>
+                            </div>
+                        }
+
+                        isFirstTime4 = false;
+
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
